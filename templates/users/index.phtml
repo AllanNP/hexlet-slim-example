@@ -1,0 +1,29 @@
+<?php if ($messages) : ?>
+    <?php foreach ($messages['success'] as $mess) : ?>
+        <div><?= $mess ?></div>
+    <?php endforeach; ?>
+<?php endif; ?>
+    <form action="/users" method="get">
+        <input type="search" name="term" value="<?= htmlspecialchars($term) ?>"/>
+        <input type="submit" value="Search"/>
+    </form>
+<?php if ($users) : ?>
+    <table>
+        <thead>
+        <tr>
+            <td>id</td>
+            <td>nickname</td>
+            <td>email</td>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($users as $user) : ?>
+            <tr>
+                <td><?= $user['id'] ?></td>
+                <td><?= $user['nickname'] ?></td>
+                <td><?= $user['email'] ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+<?php endif; ?>

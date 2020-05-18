@@ -1,0 +1,21 @@
+<form action="/users" method="post">
+    <div>
+        <label>
+            nickname
+            <input type="text" readonly value="<?= $user['id'] ?>" name="user[id]">
+        </label>
+    </div>
+    <div>
+        <label>
+            nickname
+            <input type="text" value="<?= $user['nickname'] ?>" name="user[nickname]">
+        </label>
+    </div>
+    <div>
+        <label>
+            Email
+            <input type="email" value="<?= $user['email'] ?>" required name="user[email]">
+        </label>
+    </div>
+    <input type="submit" value="Sign Up">
+</form>
